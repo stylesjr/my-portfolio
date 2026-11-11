@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>My Portfolio</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            </ul>
+        </nav>
+
+        <a class="goat" href="tel:+2347067262682">Contact Me</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Frontend Developer</p>
+                <h2>Welcome To My Portfolio</h2>
+                <p>Hi, I'm a passionate developer with experience in web development and design. I love creating beautiful and functional websites.</p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="primary-btn">View Projects</a>
+                    <a href="mailto:okerekematthew07@gmail.com?subject=Hiring%20Inquiry%20for%20Frontend%20Developer&body=Hello%20Matthew%2C%0A%0AThank%20you%20for%20your%20portfolio%20and%20for%20considering%20working%20with%20me.%20I%20would%20like%20to%20discuss%20a%20potential%20hiring%20opportunity%20for%20my%20team%20or%20company.%0A%0ACompany%20Name%3A%20%5BYour%20Company%20Name%5D%0AYour%20Name%3A%20%5BYour%20Name%5D%0ARole%20or%20Project%3A%20%5BProject%20or%20Role%20Details%5D%0ATimeline%3A%20%5BPreferred%20Timeline%5D%0A%0AI%20would%20love%20to%20learn%20more%20about%20the%20scope%20and%20how%20I%20can%20help.%20Please%20let%20me%20know%20a%20good%20time%20to%20connect.%0A%0AThank%20you%2C%0A%5BYour%20Name%5D%0A%5BCompany%20Name%5D%0A%5BYour%20Contact%20Details%5D" class="secondary-btn">Hire Me</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="stat">
+                    <strong>2+</strong>
+                    <span>Years Experience</span>
+                </div>
+                <div class="stat">
+                    <strong>10+</strong>
+                    <span>Projects</span>
+                </div>
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Client Focus</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="section-heading">
+                <p class="section-tag">About</p>
+                <h3>About Me</h3>
+            </div>
+            <p>I build responsive, user-friendly digital experiences using HTML, CSS, JavaScript, and strong design thinking. I enjoy turning ideas into websites that are both attractive and functional.</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <div class="section-heading">
+                <p class="section-tag">Portfolio</p>
+                <h3>Featured Projects</h3>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all" type="button">All</button>
+                <button class="filter-btn" data-filter="web" type="button">Web</button>
+                <button class="filter-btn" data-filter="design" type="button">Design</button>
+                <button class="filter-btn" data-filter="apps" type="button">Apps</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" data-category="web">
+                    <span class="tag">Web</span>
+                    <h4>Personal Website</h4>
+                    <p>A personal portfolio built to showcase my work and make my services easy to contact.</p>
+                    <a href="#contact">Let's build</a>
+                </article>
+
+                <article class="project-card" data-category="design">
+                    <span class="tag">Design</span>
+                    <h4>Brand Landing Page</h4>
+                    <p>A modern landing page designed to convert visitors into clients through clear messaging.</p>
+                    <a href="#contact">View concept</a>
+                </article>
+
+                <article class="project-card" data-category="apps">
+                    <span class="tag">Apps</span>
+                    <h4>Business Dashboard</h4>
+                    <p>A clean interface for tracking metrics, tasks, and customer activity in one dashboard.</p>
+                    <a href="#contact">Build yours</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <div class="section-heading">
+                <p class="section-tag">Skills</p>
+                <h3>Tools I Use</h3>
+            </div>
+
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>UI/UX</li>
+                <li>Frontend Debugging</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section contact-section">
+            <div class="section-heading">
+                <p class="section-tag">Contact</p>
+                <h3>Let’s Work Together</h3>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p>Need a website, landing page, or portfolio?</p>
+                    <a href="tel:+2347067262682">+2347067262682</a>
+                    <a href="mailto:okerekematthew07@gmail.com">okerekematthew07@gmail.com</a>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <p id="formStatus" class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

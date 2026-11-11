@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ongoing Projects | My Portfolio</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>My Portfolio</h1>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="login.html#about">About Me</a></li>
+          <li><a href="login.html#projects">Projects</a></li>
+          <li><a href="login.html#skills">Skills</a></li>
+          <li><a href="login.html#contact">Contact</a></li>
+          <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+        </ul>
+      </nav>
+
+      <a class="goat" href="tel:+2347067262682">Contact Me</a>
+    </header>
+
+    <main class="progress-page">
+      <section class="progress-hero">
+        <p class="section-tag">Current work</p>
+        <h2>Ongoing Project Progress</h2>
+        <p>
+          Track how far each project has moved, what is already complete, and what is left
+          before the final launch. Update the status any time a milestone is reached.
+        </p>
+      </section>
+
+      <section class="progress-layout">
+        <aside class="progress-form-card">
+          <h3>Add or update a project</h3>
+
+          <form id="progressForm" class="progress-form">
+            <input type="hidden" id="projectId" />
+
+            <div>
+              <label for="projectName">Project name</label>
+              <input id="projectName" name="projectName" type="text" placeholder="Example: Client Website" required />
+            </div>
+
+            <div>
+              <label for="projectType">Type</label>
+              <select id="projectType" name="projectType">
+                <option value="Web">Web</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Branding">Branding</option>
+                <option value="Business">Business</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="projectProgress">Completion</label>
+              <div class="range-row">
+                <span>0%</span>
+                <strong id="progressValue">50%</strong>
+                <span>100%</span>
+              </div>
+              <input id="projectProgress" name="projectProgress" type="range" min="0" max="100" value="50" />
+            </div>
+
+            <div>
+              <label for="currentMilestone">Current milestone</label>
+              <input id="currentMilestone" name="currentMilestone" type="text" placeholder="Example: UI design approved" required />
+            </div>
+
+            <div>
+              <label for="remainingWork">What is left to complete</label>
+              <textarea id="remainingWork" name="remainingWork" placeholder="Add each task on a new line or separated by commas" required></textarea>
+            </div>
+
+            <div class="progress-actions">
+              <button type="submit" class="submit-btn">Save Project</button>
+              <button type="button" class="secondary-btn" id="clearProject">New Project</button>
+            </div>
+          </form>
+        </aside>
+
+        <div class="progress-list">
+          <div class="progress-list-header">
+            <h3>Current projects</h3>
+          </div>
+
+          <div id="emptyState" class="empty-state">
+            No projects added yet. Use the form to add your first project progress update.
+          </div>
+
+          <div id="projectList" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
